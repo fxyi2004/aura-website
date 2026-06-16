@@ -5,8 +5,14 @@ export interface Case {
   scenario_en: string;
   scenario_zh: string;
   title: string;
+  title_en?: string;
+  title_es?: string;
   summary: string;
+  summary_en?: string;
+  summary_es?: string;
   results: string[];
+  results_en?: string[];
+  results_es?: string[];
   sort_order: number;
   published: boolean;
 }

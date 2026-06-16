@@ -4,25 +4,38 @@ import { useState } from 'react';
 import ScenarioCard from './ScenarioCard';
 import { scenarios } from '@/app/data/scenarios';
 import Assistant from './Assistant';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+
+const SCENARIO_IDX: { [id: string]: number } = {
+  security: 0,
+  campus: 1,
+  agriculture: 2,
+  logistics: 3,
+};
 
 export default function ScenariosSection() {
   const [assistantOpen, setAssistantOpen] = useState(false);
   const t = useTranslations('scenarios_section');
+  const sm = useTranslations('scenariosMeta');
+  const locale = useLocale();
+
+  const getTitle = (id: string) => {
+    const idx = SCENARIO_IDX[id] ?? 0;
+    return sm((idx + '.title') as any);
+  };
+
+  const getSubtitle = (id: string) => {
+    const idx = SCENARIO_IDX[id] ?? 0;
+    return sm((idx + '.subtitle') as any);
+  };
 
   return (
-    <section id="scenarios" className="scenarios-section">
+    <div id="scenarios" className="scenarios-section">
       <div className="container">
         <div className="section-header">
           <h1 className="main-title">{t('title')}</h1>
           <p className="sub-title">{t('subtitle')}</p>
-          <div className="bounce-arrow" onClick={() => {
-            const el = document.querySelector('.scenarios-grid');
-            if (el) {
-              const top = el.getBoundingClientRect().top + window.scrollY - 90;
-              window.scrollTo({ top, behavior: 'smooth' });
-            }
-          }}> 
+          <div className="bounce-arrow">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M12 5v14M5 12l7 7 7-7"/>
             </svg>
@@ -33,28 +46,14 @@ export default function ScenariosSection() {
             <ScenarioCard
               key={scenario.id}
               id={scenario.id}
-              name={scenario.name}
-              description={scenario.description}
+              name={getTitle(scenario.id)}
+              description={locale === 'en' ? '' : getSubtitle(scenario.id)}
               image={scenario.image}
               color={scenario.color}
+              viewText={t('view_solutions')}
             />
           ))}
         </div>
-
-        {/* 高级咨询入口 - 暂时备注
-        <div className="expert-zone">
-          <span className="expert-line"></span>
-          <div className="expert-center">
-            <span className="expert-text">拿不准？</span>
-            <span className="expert-link" onClick={() => {
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-            }}>
-              <span className="expert-emoji">🤝</span> 一对一咨询
-            </span>
-          </div>
-          <span className="expert-line"></span>
-        </div>
-        */}
       </div>
       <Assistant isOpen={assistantOpen} onClose={() => setAssistantOpen(false)} />
 
@@ -63,10 +62,9 @@ export default function ScenariosSection() {
           display: flex;
           justify-content: center;
           margin-top: 18px;
-          cursor: pointer;
-          animation: bounce 2s infinite;
           color: #3b82f6;
           opacity: 0.8;
+          animation: bounce 2s infinite;
         }
         @keyframes bounce {
           0%, 100% { transform: translateY(0); }
@@ -102,50 +100,12 @@ export default function ScenariosSection() {
           gap: 32px;
           margin-bottom: 40px;
         }
-        .expert-zone {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 20px;
-          margin: 40px 0 24px;
-        }
-        .expert-line {
-          width: 80px;
-          height: 1px;
-          background: #e2e8f0;
-        }
-        .expert-center {
-          display: flex;
-          align-items: baseline;
-          gap: 6px;
-        }
-        .expert-text {
-          font-size: 14px;
-          color: #94a3b8;
-          font-weight: 400;
-        }
-        .expert-link {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          font-size: 14px;
-          font-weight: 500;
-          color: #2563eb;
-          cursor: pointer;
-          transition: color 0.2s;
-        }
-        .expert-link:hover {
-          color: #2563eb;
-        }
-        .expert-emoji {
-          font-size: 16px;
-        }
         @media (max-width: 768px) {
           .main-title {
             font-size: 28px;
           }
         }
       `}</style>
-    </section>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 interface ProductCardProps {
   id: string;
@@ -10,6 +11,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ id, name, description, image }: ProductCardProps) {
+  const t = useTranslations('products_featured');
   return (
     <Link href={`/products/${id}`} className="product-card">
       <div className="product-image-wrapper">
@@ -21,7 +23,7 @@ export default function ProductCard({ id, name, description, image }: ProductCar
         <p className="product-desc">{description}</p>
         <div className="product-footer">
           <span className="product-btn">
-            查看详情
+            {t('view_detail')}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="btn-icon">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>

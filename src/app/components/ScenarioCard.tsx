@@ -8,9 +8,10 @@ interface ScenarioCardProps {
   description: string;
   image: string;
   color: string;
+  viewText?: string;
 }
 
-export default function ScenarioCard({ id, name, description, image, color }: ScenarioCardProps) {
+export default function ScenarioCard({ id, name, description, image, color, viewText = '查看方案 →' }: ScenarioCardProps) {
   return (
     <Link href={`/scenarios/${id}`} className="scenario-card">
       <div className="card-image-wrapper">
@@ -19,7 +20,7 @@ export default function ScenarioCard({ id, name, description, image, color }: Sc
       <div className="card-content">
         <h3 className="card-title">{name}</h3>
         <p className="card-description">{description}</p>
-        <span className="card-arrow">查看方案 →</span>
+        <span className="card-arrow">{viewText}</span>
       </div>
 
       <style jsx global>{`

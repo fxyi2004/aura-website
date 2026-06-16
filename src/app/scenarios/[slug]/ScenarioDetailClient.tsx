@@ -4,6 +4,15 @@ import Link from 'next/link';
 import type { Product } from '@/lib/products';
 import type { ScenarioMeta } from '@/app/data/scenariosMeta';
 import ProductCard from '@/app/components/ProductCard';
+import { useTranslations } from 'next-intl';
+import { Link as I18nLink } from '@/i18n/routing';
+
+const SCENARIO_IDX: { [id: string]: number } = {
+  security: 0,
+  campus: 1,
+  agriculture: 2,
+  logistics: 3,
+};
 
 interface Props {
   scenario: ScenarioMeta;
@@ -11,16 +20,39 @@ interface Props {
 }
 
 export default function ScenarioDetailClient({ scenario, products }: Props) {
+  const nav = useTranslations('nav');
+  const sd = useTranslations('scenario_detail');
+  const sm = useTranslations('scenariosMeta');
+  const pl = useTranslations('products_list');
+
+  const idx = SCENARIO_IDX[scenario.id] ?? 0;
+  const title = sm(idx + '.title' as any);
+  const subtitle = sm(idx + '.subtitle' as any);
+  const description = sm(idx + '.description' as any);
+  const highlights: string[] = [
+    sm(idx + '.highlights.0' as any),
+    sm(idx + '.highlights.1' as any),
+    sm(idx + '.highlights.2' as any),
+    sm(idx + '.highlights.3' as any),
+  ];
+
+  const getProductName = (p: Product) => {
+    try { return pl(p.id + '.name' as any); } catch { return p.name; }
+  };
+  const getProductDesc = (p: Product) => {
+    try { return pl(p.id + '.desc' as any); } catch { return p.description; }
+  };
+
   return (
     <div className="scenario-detail">
 
       {/* Hero */}
       <div className="hero">
-        <img src={scenario.image} alt={scenario.title} className="hero-img" />
+        <img src={scenario.image} alt={title} className="hero-img" />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <p className="hero-sub">{scenario.subtitle}</p>
-          <h1 className="hero-title">{scenario.title}</h1>
+          <p className="hero-sub">{subtitle}</p>
+          <h1 className="hero-title">{title}</h1>
         </div>
       </div>
 
@@ -28,18 +60,18 @@ export default function ScenarioDetailClient({ scenario, products }: Props) {
 
         {/* Breadcrumb */}
         <div className="breadcrumb">
-          <Link href="/">首页</Link>
+          <I18nLink href="/">{nav('home')}</I18nLink>
           <span>/</span>
-          <Link href="/scenarios">场景方案</Link>
+          <I18nLink href="/scenarios">{nav('scenarios')}</I18nLink>
           <span>/</span>
-          <span>{scenario.title}</span>
+          <span>{title}</span>
         </div>
 
         {/* Description */}
         <section className="section desc-section">
-          <p className="desc-text">{scenario.description}</p>
+          <p className="desc-text">{description}</p>
           <div className="highlights">
-            {scenario.highlights.map((h) => (
+            {highlights.map((h) => (
               <span key={h} className="highlight-tag">{h}</span>
             ))}
           </div>
@@ -49,10 +81,10 @@ export default function ScenarioDetailClient({ scenario, products }: Props) {
         {products.length > 0 && (
           <section className="section">
             <p className="section-label">RECOMMENDED PRODUCTS</p>
-            <h2 className="section-title">推荐产品方案</h2>
+            <h2 className="section-title">{sd('recommended_title')}</h2>
             <div className="products-grid">
               {products.map((p) => (
-                <ProductCard key={p.id} id={p.id} name={p.name} description={p.description} image={p.image_url} />
+                <ProductCard key={p.id} id={p.id} name={getProductName(p)} description={getProductDesc(p)} image={p.image_url} />
               ))}
             </div>
           </section>
@@ -60,11 +92,11 @@ export default function ScenarioDetailClient({ scenario, products }: Props) {
 
         {/* CTA */}
         <section className="cta-section">
-          <h2>为你的项目定制方案</h2>
-          <p>告诉我们你的具体需求，我们在48小时内给出初步方案建议</p>
+          <h2>{sd('cta_title')}</h2>
+          <p>{sd('cta_desc')}</p>
           <div className="cta-btns">
-            <Link href="/contact" className="btn-primary">立即咨询</Link>
-            <Link href="/scenarios" className="btn-secondary">查看其他场景</Link>
+            <I18nLink href="/contact" className="btn-primary">{sd('consult_now')}</I18nLink>
+            <I18nLink href="/scenarios" className="btn-secondary">{sd('view_others')}</I18nLink>
           </div>
         </section>
 

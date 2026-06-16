@@ -7,6 +7,7 @@ import { Link } from '@/i18n/routing';
 
 export default function ProductsFeatured() {
   const t = useTranslations('products_featured');
+  const pl = useTranslations('products_list');
 
   return (
     <section className="products-featured">
@@ -20,8 +21,8 @@ export default function ProductsFeatured() {
             <ProductCard
               key={product.id}
               id={product.id}
-              name={product.name}
-              description={product.description}
+              name={pl(`${product.id}.name`)}
+              description={pl(`${product.id}.desc`)}
               image={product.image}
             />
           ))}
@@ -79,7 +80,7 @@ export default function ProductsFeatured() {
           border: 1px solid #e2e8f0;
           border-radius: 60px;
           font-size: 14px;
-          font-weight: 500;
+          font-weight: 700;
           color: #2563eb;
           text-decoration: none;
           transition: all 0.3s;

@@ -9,6 +9,7 @@ import { Link } from '@/i18n/routing';
 export default function ScenariosClient({ products }: { products: Product[] }) {
   const t = useTranslations('scenarios_page');
   const scenariosT = useTranslations('scenariosMeta');
+  const pl = useTranslations('products_list');
 
   // Build localized scenarios from translation data
   const localizedScenarios = scenariosMeta.map((s, i) => ({
@@ -73,10 +74,15 @@ export default function ScenariosClient({ products }: { products: Product[] }) {
                     <div className="products-grid">
                       {scenarioProducts.map(p => (
                         <Link href={`/products/${p.id}`} key={p.id} className="product-chip">
-                          <div className="chip-img-wrap">
-                            <img src={p.image_url} alt={p.name} className="chip-img" />
-                          </div>
-                          <span className="chip-name">{p.name}</span>
+                          {(() => {
+                            const name = (() => { try { return pl(`${p.id}.name` as any); } catch { return p.name; } })();
+                            return <>
+                              <div className="chip-img-wrap">
+                                <img src={p.image_url} alt={name} className="chip-img" />
+                              </div>
+                              <span className="chip-name">{name}</span>
+                            </>;
+                          })()}
                         </Link>
                       ))}
                     </div>

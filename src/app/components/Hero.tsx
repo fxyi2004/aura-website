@@ -15,8 +15,9 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              AIR-GROUND-WATER<br />
-              UNMANNED SYSTEMS SOLUTIONS
+              {t('title').split('\n').map((line, i) => (
+                i === 0 ? <span key={i}>{line}<br /></span> : <span key={i}>{line}</span>
+              ))}
             </h1>
             <div className="hero-tags">
               <span>UAV</span>

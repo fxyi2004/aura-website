@@ -2,11 +2,12 @@
 
 import { Case } from '@/lib/cases';
 import FloatingButton from '@/app/components/FloatingButton';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/routing';
 
 export default function CasesClient({ cases }: { cases: Case[] }) {
   const t = useTranslations('cases_page');
+  const locale = useLocale();
 
   return (
     <section className="cases-page">
@@ -26,13 +27,12 @@ export default function CasesClient({ cases }: { cases: Case[] }) {
             {cases.map((c) => (
               <div className="case-card" key={c.id}>
                 <div className="card-top">
-                  <span className="scenario-label">{c.scenario_en}</span>
-                  <span className="tag">{c.scenario_zh}</span>
+                  <span className="scenario-label">{locale === 'zh' ? c.scenario_zh : c.scenario_en}</span>
                 </div>
-                <h3>{c.title}</h3>
-                <p className="summary">{c.summary}</p>
+                <h3>{locale === 'zh' ? c.title : locale === 'es' ? (c.title_es || c.title_en || c.title) : (c.title_en || c.title)}</h3>
+                <p className="summary">{locale === 'zh' ? c.summary : locale === 'es' ? (c.summary_es || c.summary_en || c.summary) : (c.summary_en || c.summary)}</p>
                 <div className="results">
-                  {c.results.map((r, i) => (
+                  {(locale === 'zh' ? c.results : locale === 'es' ? (c.results_es?.length ? c.results_es : c.results_en?.length ? c.results_en : c.results) : (c.results_en?.length ? c.results_en : c.results)).map((r, i) => (
                     <div className="result-item" key={i}>
                       <span className="result-dot" />
                       {r}

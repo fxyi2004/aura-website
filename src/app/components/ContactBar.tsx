@@ -12,8 +12,8 @@ export default function ContactBar() {
       <div className="container">
         <div className="contact-bar">
           <span>{t('text')}</span>
-          <Link href="/contact" className="contact-bar-btn">{t('submit')}</Link>
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="contact-bar-wa">{t('whatsapp')}</a>
+          <Link href="/contact" className="contact-bar-btn" style={{background:'white',color:'#0f172a',padding:'8px 0',borderRadius:'40px',fontWeight:500,textDecoration:'none',whiteSpace:'nowrap',minWidth:'160px',textAlign:'center',display:'inline-block'}}>{t('submit')}</Link>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="contact-bar-wa" style={{background:'#25d366',color:'white',padding:'8px 0',borderRadius:'40px',textDecoration:'none',whiteSpace:'nowrap',minWidth:'160px',textAlign:'center',display:'inline-block'}}>{t('whatsapp')}</a>
         </div>
       </div>
 

@@ -1,11 +1,13 @@
 'use client';
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="container">
         <p className="tagline">AIR · GROUND · WATER &nbsp;&nbsp; SMART SYSTEMS. REAL IMPACT.</p>
-        <p className="copyright">© {new Date().getFullYear()} AURA INTELLIGENT SYSTEMS</p>
+        <p className="copyright">© {year} AURA INTELLIGENT SYSTEMS</p>
       </div>
 
       <style jsx>{`

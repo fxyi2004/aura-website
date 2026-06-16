@@ -1,17 +1,20 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { Suspense } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface Props {
-  params: Promise<{ param: string }>;
+  params: { param: string };
 }
 
 function SpecDetailContent({ paramName }: { paramName: string }) {
   const searchParams = useSearchParams();
   const value = searchParams.get('value') || '';
-  const explanation = searchParams.get('explanation') || '该参数的具体技术说明请咨询我们的技术顾问。';
+  const t = useTranslations('specs_page');
+  const pd = useTranslations('product_detail');
+  const explanation = searchParams.get('explanation') || pd('spec_default');
 
   return (
     <div className="spec-detail-wrapper">
@@ -20,13 +23,13 @@ function SpecDetailContent({ paramName }: { paramName: string }) {
         <h1>{paramName}</h1>
         <div className="spec-value-large">{value}</div>
         <div className="spec-explanation-card">
-          <h3>详细说明</h3>
+          <h3>{t('details')}</h3>
           <p>{explanation}</p>
         </div>
         <div className="spec-actions">
-          <Link href="/contact" className="btn-inquiry">获取详细规格书</Link>
-          <a href="https://wa.me/861234567890?text=Hello" target="_blank" rel="noopener noreferrer" className="btn-wa-small">
-            咨询技术顾问
+          <Link href="/contact" className="btn-inquiry">{t('get_spec_sheet')}</Link>
+          <a href="https://wa.me/8615001168605" target="_blank" rel="noopener noreferrer" className="btn-wa-small">
+            {t('talk_advisor')}
           </a>
         </div>
       </div>
@@ -118,18 +121,18 @@ function SpecDetailContent({ paramName }: { paramName: string }) {
   );
 }
 
-export default async function SpecDetailPage({ params }: Props) {
-  const { param } = await params;
-  const paramName = decodeURIComponent(param);
+export default function SpecDetailPage({ params }: Props) {
+  const paramName = decodeURIComponent(params.param);
+  const t = useTranslations('specs_page');
 
   return (
     <div className="detail-page">
       <div className="container">
         <div className="detail-nav">
-          <Link href="/products" className="back-btn">← 返回产品</Link>
-          <Link href="/" className="back-btn">首页</Link>
+          <Link href="/products" className="back-btn">{t('back_products')}</Link>
+          <Link href="/" className="back-btn">{t('home')}</Link>
         </div>
-        <Suspense fallback={<div>加载中...</div>}>
+        <Suspense fallback={<div>{t('loading')}</div>}>
           <SpecDetailContent paramName={paramName} />
         </Suspense>
       </div>

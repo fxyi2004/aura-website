@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import ProductCard from '@/app/components/ProductCard';
 import type { Product } from '@/lib/products';
 import FloatingButton from '@/app/components/FloatingButton';
@@ -8,6 +9,7 @@ import { useTranslations } from 'next-intl';
 
 export default function ProductsClient({ products }: { products: Product[] }) {
   const t = useTranslations('products_page');
+  const pl = useTranslations('products_list');
   const catT = useTranslations('categoryOptions');
   const usecaseT = useTranslations('usecaseLabels');
   const scenarioT = useTranslations('scenarioLabels');
@@ -36,9 +38,22 @@ export default function ProductsClient({ products }: { products: Product[] }) {
     logistics: scenarioT('logistics'),
   };
 
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [activeUsecase, setActiveUsecase] = useState<string | null>(null);
-  const [activeScenario, setActiveScenario] = useState<string | null>(null);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const [activeCategory, setActiveCategory] = useState<string | null>(() => searchParams.get('cat'));
+  const [activeUsecase, setActiveUsecase] = useState<string | null>(() => searchParams.get('use'));
+  const [activeScenario, setActiveScenario] = useState<string | null>(() => searchParams.get('sc'));
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (activeCategory) params.set('cat', activeCategory);
+    if (activeUsecase) params.set('use', activeUsecase);
+    if (activeScenario) params.set('sc', activeScenario);
+    const qs = params.toString();
+    router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+  }, [activeCategory, activeUsecase, activeScenario, pathname, router]);
 
   const availableUsecases = useMemo(() => {
     const pool = activeCategory ? products.filter(p => p.category === activeCategory) : products;
@@ -128,7 +143,7 @@ export default function ProductsClient({ products }: { products: Product[] }) {
           {filtered.length > 0 ? (
             <div className="products-grid">
               {filtered.map((product) => (
-                <ProductCard key={product.id} id={product.id} name={product.name} description={product.description} image={product.image_url} />
+                <ProductCard key={product.id} id={product.id} name={(() => { try { return pl(`${product.id}.name` as any); } catch { return product.name; } })()} description={(() => { try { return pl(`${product.id}.desc` as any); } catch { return product.description; } })()} image={product.image_url} />
               ))}
             </div>
           ) : (

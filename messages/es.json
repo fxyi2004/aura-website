@@ -8,17 +8,31 @@
     "contact": "Cotizar"
   },
   "hero": {
-    "title": "AIR-GROUND-WATER\nUNMANNED SYSTEMS SOLUTIONS",
+    "title": "AIRE-TIERRA-AGUA\nSOLUCIONES DE SISTEMAS NO TRIPULADOS",
     "button": "Ver Soluciones"
   },
   "scenarios_section": {
-    "title": "¿Eres agricultor, autoridad portuaria, inspector eléctrico o comandante de seguridad?",
-    "subtitle": "Parte de tu escenario y obtén recomendaciones de equipos personalizadas — sin rodeos."
+    "title": "¡Hola! ¿Eres agricultor, autoridad portuaria, inspector eléctrico o comandante de seguridad?",
+    "subtitle": "Parte de tu escenario y obtén recomendaciones de equipos personalizadas — sin rodeos.",
+    "view_solutions": "Ver Solución →"
   },
   "products_featured": {
     "title": "Líneas de Productos Principales",
     "subtitle": "Selección destacada para satisfacer diversas necesidades de escenarios",
-    "view_all": "Ver Todos los Productos"
+    "view_all": "Ver Todos los Productos",
+    "view_detail": "Ver Detalles"
+  },
+  "products_list": {
+    "p1":  { "name": "Drone de Inspección",        "desc": "Patrulla de seguridad con detección IA de anomalías" },
+    "p9":  { "name": "Cámara Esférica de Patrulla", "desc": "Patrulla panorámica 360° con análisis IA" },
+    "p10": { "name": "Cámara Láser con Zoom",       "desc": "Bloqueo de objetivos a larga distancia, día y noche" },
+    "p3":  { "name": "Drone Agrícola de Fumigación","desc": "Fumigación automática, operaciones de campo precisas" },
+    "p5":  { "name": "Drone de Patrulla Seguridad", "desc": "Patrulla 24/7 con alertas de anomalías en tiempo real" },
+    "p11": { "name": "Cámara de Seguridad IA",      "desc": "Reconocimiento facial inteligente, alertas en tiempo real" },
+    "p6":  { "name": "Robot de Seguridad",          "desc": "Patrulla autónoma, reconocimiento facial" },
+    "p2":  { "name": "Robot de Logística",          "desc": "Entrega de paquetes en campus, navegación autónoma" },
+    "p7":  { "name": "Drone de Carga Pesada",       "desc": "50 kg de carga, entrega en áreas remotas" },
+    "p8":  { "name": "Vehículo Todo Terreno UGV",   "desc": "Orugas para terreno complejo" }
   },
   "contact_bar": {
     "text": "¿Necesitas consultoría personalizada?",
@@ -154,6 +168,33 @@
     "success_title": "Mensaje Enviado",
     "success_desc": "Hemos recibido tu consulta. Un asesor técnico se pondrá en contacto contigo pronto.",
     "submit_again": "Enviar Otra Consulta"
+  },
+  "scenario_detail": {
+    "recommended_title": "Productos Recomendados",
+    "cta_title": "Personaliza una Solución para Tu Proyecto",
+    "cta_desc": "Cuéntanos tus necesidades y te proporcionaremos una propuesta preliminar en 48 horas.",
+    "consult_now": "Contáctanos",
+    "view_others": "Ver Otros Escenarios"
+  },
+  "product_detail": {
+    "loading": "Cargando...",
+    "tech_specs": "Especificaciones",
+    "get_quote": "Solicitar Cotización",
+    "whatsapp": "WhatsApp",
+    "related": "Productos Relacionados",
+    "spec_flight": "Tiempo de trabajo continuo en condiciones estándar. La autonomía real puede variar con la carga y la temperatura.",
+    "spec_transmission": "Alcance máximo de transmisión de imagen en entornos despejados. El alcance real puede variar.",
+    "spec_payload": "Peso máximo de carga útil efectiva manteniendo seguridad y estabilidad.",
+    "spec_navigation": "Tecnología de posicionamiento y navegación para movimiento autónomo de precisión.",
+    "spec_default": "Consulte a nuestros asesores técnicos para obtener especificaciones detalladas de parámetros."
+  },
+  "specs_page": {
+    "back_products": "← Volver a Productos",
+    "home": "Inicio",
+    "loading": "Cargando...",
+    "details": "Detalles",
+    "get_spec_sheet": "Obtener Ficha Técnica",
+    "talk_advisor": "Hablar con un Asesor"
   },
   "footer": {
     "tagline": "AIR · GROUND · WATER     SMART SYSTEMS. REAL IMPACT.",

@@ -1,10 +1,11 @@
 'use client';
 
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { getProductById, getAllProducts } from '@/lib/products';
 import type { Product } from '@/lib/products';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 interface Props {
   params: { id: string };
@@ -14,6 +15,10 @@ export default function ProductDetailPage({ params }: Props) {
   const [product, setProduct] = useState<Product | null>(null);
   const [related, setRelated] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const nav = useTranslations('nav');
+  const pd = useTranslations('product_detail');
+  const pl = useTranslations('products_list');
 
   useEffect(() => {
     const { id } = params;
@@ -28,48 +33,56 @@ export default function ProductDetailPage({ params }: Props) {
     })();
   }, [params.id]);
 
-  if (loading) return <div style={{minHeight:'100vh',background:'#f8fafc',display:'flex',alignItems:'center',justifyContent:'center',color:'#94a3b8',fontSize:'14px'}}>加载中...</div>;
-  if (!product) return notFound();
+  const getProductName = (p: Product) => {
+    try { return pl(p.id + '.name' as any); } catch { return p.name; }
+  };
+  const getProductDesc = (p: Product) => {
+    try { return pl(p.id + '.desc' as any); } catch { return p.description; }
+  };
 
   const getSpecExplanation = (key: string): string => {
-    if (key.includes('续航')) return '该产品在标准工况下的持续工作时间，实际续航可能因负载、环境温度等因素有所变化。';
-    if (key.includes('图传')) return '在无遮挡、无干扰环境下的最大图像传输距离，实际距离可能受环境影响。';
-    if (key.includes('载重')) return '指产品在保证安全性和稳定性前提下的最大有效负载重量。';
-    if (key.includes('导航')) return '产品采用的定位和导航技术组合，确保自主移动的精度和可靠性。';
-    return '该参数的具体技术说明请咨询我们的技术顾问，我们将为您提供详细解读。';
+    if (key.includes('续航') || key.toLowerCase().includes('flight') || key.toLowerCase().includes('endurance')) return pd('spec_flight');
+    if (key.includes('图传') || key.toLowerCase().includes('transmission')) return pd('spec_transmission');
+    if (key.includes('载重') || key.toLowerCase().includes('payload')) return pd('spec_payload');
+    if (key.includes('导航') || key.toLowerCase().includes('navigation')) return pd('spec_navigation');
+    return pd('spec_default');
   };
+
+  if (loading) return <div style={{minHeight:'100vh',background:'#f8fafc',display:'flex',alignItems:'center',justifyContent:'center',color:'#94a3b8',fontSize:'14px'}}>{pd('loading')}</div>;
+  if (!product) return notFound();
 
   return (
     <div className="detail-page">
       <div className="container">
         <div className="breadcrumb">
-          <Link href="/">首页</Link>
+          <Link href="/">{nav('home')}</Link>
           <span>/</span>
-          <Link href="/products">产品中心</Link>
+          <Link href="/products">{nav('products')}</Link>
           <span>/</span>
-          <span>{product.name}</span>
+          <span>{getProductName(product)}</span>
         </div>
 
         <div className="main-grid">
           <div className="image-col">
             <div className="image-wrap">
-              <img src={product.image_url} alt={product.name} className="product-img" />
+              <img src={product.image_url} alt={getProductName(product)} className="product-img" />
             </div>
           </div>
 
           <div className="info-col">
-            <p className="product-category">{product.name}</p>
-            <h1 className="product-title">{product.description}</h1>
+            <p className="product-category">{product.category?.toUpperCase()}</p>
+            <h1 className="product-title">{getProductName(product)}</h1>
+            <p className="product-desc">{getProductDesc(product)}</p>
             <p className="product-full">{product.full_description}</p>
 
             <div className="specs">
-              <h3 className="specs-title">技术参数</h3>
+              <h3 className="specs-title">{pd('tech_specs')}</h3>
               <div className="specs-list">
                 {product.specs.map(({ spec_key, spec_value }) => (
                   <div className="spec-row" key={spec_key}>
                     <span className="spec-key">
                       {spec_key}
-                      <Link href={`/specs/${encodeURIComponent(spec_key)}?value=${encodeURIComponent(spec_value)}&explanation=${encodeURIComponent(getSpecExplanation(spec_key))}`} className="spec-link" title="查看参数说明">›</Link>
+                      <Link href={('/specs/' + encodeURIComponent(spec_key) + '?value=' + encodeURIComponent(spec_value) + '&explanation=' + encodeURIComponent(getSpecExplanation(spec_key))) as any} className="spec-link">›</Link>
                     </span>
                     <span className="spec-value">{spec_value}</span>
                   </div>
@@ -78,10 +91,10 @@ export default function ProductDetailPage({ params }: Props) {
             </div>
 
             <div className="actions">
-              <Link href="/contact" className="btn-primary" style={{background:'#1e3a8a',color:'white',padding:'9px 20px',borderRadius:'40px',fontWeight:600,fontSize:'13px',textAlign:'center',flex:1,display:'block'}}>获取报价</Link>
-              <a href="https://wa.me/861234567890" target="_blank" rel="noopener noreferrer" className="btn-wa">
+              <Link href="/contact" className="btn-primary" style={{background:'#1e3a8a',color:'white',padding:'9px 20px',borderRadius:'40px',fontWeight:600,fontSize:'13px',textAlign:'center',flex:1,display:'block'}}>{pd('get_quote')}</Link>
+              <a href="https://wa.me/8615001168605" target="_blank" rel="noopener noreferrer" className="btn-wa">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.522 5.852L.057 23.743a.5.5 0 00.613.633l6.094-1.598A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.74-.52-5.29-1.428l-.38-.224-3.924 1.03 1.048-3.817-.248-.394A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-                WhatsApp 咨询
+                {pd('whatsapp')}
               </a>
             </div>
           </div>
@@ -89,16 +102,16 @@ export default function ProductDetailPage({ params }: Props) {
 
         {related.length > 0 && (
           <div className="related">
-            <h3 className="related-title">相关产品</h3>
+            <h3 className="related-title">{pd('related')}</h3>
             <div className="related-grid">
               {related.map(p => (
-                <Link href={`/products/${p.id}`} key={p.id} className="related-card">
+                <Link href={('/products/' + p.id) as any} key={p.id} className="related-card">
                   <div className="related-img-wrap">
-                    <img src={p.image_url} alt={p.name} className="related-img" />
+                    <img src={p.image_url} alt={getProductName(p)} className="related-img" />
                   </div>
                   <div className="related-info">
-                    <p className="related-name">{p.name}</p>
-                    <p className="related-desc">{p.description}</p>
+                    <p className="related-name">{getProductName(p)}</p>
+                    <p className="related-desc">{getProductDesc(p)}</p>
                   </div>
                 </Link>
               ))}
@@ -118,7 +131,8 @@ export default function ProductDetailPage({ params }: Props) {
         .product-img { width: 100%; height: 100%; object-fit: cover; }
         .info-col { display: flex; flex-direction: column; }
         .product-category { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #94a3b8; margin-bottom: 8px; }
-        .product-title { font-size: 26px; font-weight: 800; color: #0f172a; line-height: 1.3; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .product-title { font-size: 26px; font-weight: 800; color: #0f172a; line-height: 1.3; margin-bottom: 8px; letter-spacing: -0.02em; }
+        .product-desc { font-size: 14px; color: #64748b; margin-bottom: 12px; }
         .product-full { font-size: 14px; color: #64748b; line-height: 1.8; margin-bottom: 32px; }
         .specs { margin-bottom: 32px; }
         .specs-title { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #94a3b8; margin-bottom: 16px; }

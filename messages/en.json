@@ -12,13 +12,27 @@
     "button": "View Solutions"
   },
   "scenarios_section": {
-    "title": "Are you a farm owner? Harbor authority? Power inspector? Or a security commander?",
-    "subtitle": "Start from your scenario, get tailored equipment recommendations — no guesswork."
+    "title": "Hi, are you a farm owner? Harbor authority? Power inspector? Or a security commander?",
+    "subtitle": "Start from your scenario, get tailored equipment recommendations — no guesswork.",
+    "view_solutions": "View Solutions →"
   },
   "products_featured": {
     "title": "Core Product Lines",
     "subtitle": "Curated picks to meet diverse scenario demands",
-    "view_all": "View All Products"
+    "view_all": "View All Products",
+    "view_detail": "View Details"
+  },
+  "products_list": {
+    "p1":  { "name": "Inspection UAV",           "desc": "Campus security patrol with AI anomaly detection" },
+    "p9":  { "name": "Spherical Inspection Cam",  "desc": "360° panoramic patrol with AI behavior analysis" },
+    "p10": { "name": "Zoom Laser Camera",          "desc": "Long-range target lock, day & night" },
+    "p3":  { "name": "Agricultural Spray Drone",   "desc": "Automated spraying, precision field operations" },
+    "p5":  { "name": "Security Patrol Drone",      "desc": "24/7 patrol with real-time anomaly alerts" },
+    "p11": { "name": "AI Security Camera",         "desc": "Smart face recognition, real-time alerts" },
+    "p6":  { "name": "Security Robot",             "desc": "Autonomous patrol, face recognition" },
+    "p2":  { "name": "Logistics Robot",            "desc": "Campus parcel delivery, autonomous navigation" },
+    "p7":  { "name": "Heavy-Lift Cargo Drone",     "desc": "50 kg payload, remote area delivery" },
+    "p8":  { "name": "All-Terrain Transport UGV",  "desc": "Track chassis for complex terrain" }
   },
   "contact_bar": {
     "text": "Need one-on-one consultation?",
@@ -154,6 +168,33 @@
     "success_title": "Message Sent",
     "success_desc": "We've received your inquiry. A technical advisor will contact you shortly.",
     "submit_again": "Submit Again"
+  },
+  "scenario_detail": {
+    "recommended_title": "Recommended Products",
+    "cta_title": "Customize a Solution for Your Project",
+    "cta_desc": "Tell us your needs and we'll provide a preliminary proposal within 48 hours.",
+    "consult_now": "Contact Us",
+    "view_others": "View Other Scenarios"
+  },
+  "product_detail": {
+    "loading": "Loading...",
+    "tech_specs": "Specifications",
+    "get_quote": "Get a Quote",
+    "whatsapp": "WhatsApp Inquiry",
+    "related": "Related Products",
+    "spec_flight": "Continuous working time under standard conditions. Actual life may vary with load and temperature.",
+    "spec_transmission": "Max image transmission range in clear environments. Actual range may vary.",
+    "spec_payload": "Maximum effective payload while maintaining safety and stability.",
+    "spec_navigation": "Positioning and navigation tech stack for autonomous precision movement.",
+    "spec_default": "Contact our technical advisors for detailed parameter specifications."
+  },
+  "specs_page": {
+    "back_products": "← Back to Products",
+    "home": "Home",
+    "loading": "Loading...",
+    "details": "Details",
+    "get_spec_sheet": "Get Full Spec Sheet",
+    "talk_advisor": "Talk to a Tech Advisor"
   },
   "footer": {
     "tagline": "AIR · GROUND · WATER     SMART SYSTEMS. REAL IMPACT.",

@@ -8,17 +8,31 @@
     "contact": "获取报价"
   },
   "hero": {
-    "title": "AIR-GROUND-WATER\nUNMANNED SYSTEMS SOLUTIONS",
+    "title": "空-地-水\n全域无人系统解决方案",
     "button": "查看解决方案"
   },
   "scenarios_section": {
     "title": "您好，您是农场主？海洋局？电力巡检员？还是安防指挥官？",
-    "subtitle": "从您的场景出发，获取专属装备推荐，选型不绕路。"
+    "subtitle": "从您的场景出发，获取专属装备推荐，选型不绕路。",
+    "view_solutions": "查看方案 →"
   },
   "products_featured": {
     "title": "核心产品系列",
     "subtitle": "精选推荐，满足多样化场景需求",
-    "view_all": "查看全部产品"
+    "view_all": "查看全部产品",
+    "view_detail": "查看详情"
+  },
+  "products_list": {
+    "p1":  { "name": "巡检无人机",       "desc": "校园安防巡逻，AI识别异常行为" },
+    "p9":  { "name": "球形巡检摄像头",   "desc": "360°全景巡检，AI行为分析" },
+    "p10": { "name": "变焦激光摄像头",   "desc": "远距离目标锁定，昼夜兼顾" },
+    "p3":  { "name": "植保无人机",       "desc": "自动喷洒，精准作业" },
+    "p5":  { "name": "安防巡逻无人机",   "desc": "24小时巡检，异常报警" },
+    "p11": { "name": "AI安防摄像头",     "desc": "智能人脸识别，实时预警" },
+    "p6":  { "name": "安防机器人",       "desc": "自主巡逻，人脸识别" },
+    "p2":  { "name": "物流机器人",       "desc": "园区快递配送，自主导航避障" },
+    "p7":  { "name": "重载物流无人机",   "desc": "山区物资投送" },
+    "p8":  { "name": "全地形运输车",     "desc": "复杂地形适应" }
   },
   "contact_bar": {
     "text": "需要一对一咨询？",
@@ -154,6 +168,33 @@
     "success_title": "消息已发送",
     "success_desc": "我们已收到您的需求，技术顾问将尽快与您联系。",
     "submit_again": "再次提交"
+  },
+  "scenario_detail": {
+    "recommended_title": "推荐产品方案",
+    "cta_title": "为你的项目定制方案",
+    "cta_desc": "告诉我们你的具体需求，我们在48小时内给出初步方案建议。",
+    "consult_now": "立即咨询",
+    "view_others": "查看其他场景"
+  },
+  "product_detail": {
+    "loading": "加载中...",
+    "tech_specs": "技术参数",
+    "get_quote": "获取报价",
+    "whatsapp": "WhatsApp 咨询",
+    "related": "相关产品",
+    "spec_flight": "该产品在标准工况下的持续工作时间，实际续航可能因负载、环境温度等因素有所变化。",
+    "spec_transmission": "在无遮挡、无干扰环境下的最大图像传输距离，实际距离可能受环境影响。",
+    "spec_payload": "指产品在保证安全性和稳定性前提下的最大有效负载重量。",
+    "spec_navigation": "产品采用的定位和导航技术组合，确保自主移动的精度和可靠性。",
+    "spec_default": "该参数的具体技术说明请咨询我们的技术顾问，我们将为您提供详细解读。"
+  },
+  "specs_page": {
+    "back_products": "← 返回产品",
+    "home": "首页",
+    "loading": "加载中...",
+    "details": "详细说明",
+    "get_spec_sheet": "获取详细规格书",
+    "talk_advisor": "咨询技术顾问"
   },
   "footer": {
     "tagline": "AIR · GROUND · WATER     SMART SYSTEMS. REAL IMPACT.",
