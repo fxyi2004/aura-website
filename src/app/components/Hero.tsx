@@ -43,7 +43,7 @@ export default function Hero() {
       <style jsx>{`
         .hero {
           position: relative;
-          background: url('/images/hero-bg.png') center center / cover no-repeat;
+          background: url('/images/hero-bg.webp') center center / cover no-repeat;
           min-height: 450px;
           display: flex;
           align-items: center;

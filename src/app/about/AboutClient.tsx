@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import FloatingButton from '@/app/components/FloatingButton';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
@@ -44,7 +45,7 @@ export default function AboutClient() {
         {/* Mission */}
         <section className="section mission-section">
           <div className="mission-image">
-            <img src="/images/hero-bg.png" alt="AURA mission" className="mission-img" />
+            <Image src="/images/hero-bg.webp" alt="AURA mission" width={900} height={500} className="mission-img" />
             <div className="mission-overlay" />
             <div className="mission-badge">
               <span className="badge-line1">{t('badge_line1')}</span>

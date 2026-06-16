@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/routing';
 
@@ -44,7 +45,7 @@ export default function Header() {
           </div>
           <div className="header-inner">
             <Link href="/" className="logo" onClick={closeMenu}>
-              <img src="/images/logo/aura-logo-slogan.png" alt="AURA" className="logo-image" />
+              <Image src="/images/logo/aura-logo-slogan.webp" alt="AURA" width={180} height={40} className="logo-image" priority />
             </Link>
 
             <nav className="nav">

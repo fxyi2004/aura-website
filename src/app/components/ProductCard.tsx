@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 
@@ -15,7 +16,7 @@ export default function ProductCard({ id, name, description, image }: ProductCar
   return (
     <Link href={`/products/${id}`} className="product-card">
       <div className="product-image-wrapper">
-        <img src={image} alt={name} className="product-image" />
+        <Image src={image} alt={name} fill className="product-image" sizes="(max-width: 768px) 100vw, 33vw" />
         <div className="image-overlay"></div>
       </div>
       <div className="product-content">
@@ -52,8 +53,6 @@ export default function ProductCard({ id, name, description, image }: ProductCar
           background: #0f172a;
         }
         .product-image {
-          width: 100%;
-          height: 100%;
           object-fit: cover;
           transition: transform 0.5s ease;
         }

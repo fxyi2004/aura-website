@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface ScenarioCardProps {
@@ -15,7 +16,7 @@ export default function ScenarioCard({ id, name, description, image, color, view
   return (
     <Link href={`/scenarios/${id}`} className="scenario-card">
       <div className="card-image-wrapper">
-        <img src={image} alt={name} className="card-image" />
+        <Image src={image} alt={name} fill className="card-image" sizes="(max-width: 768px) 100vw, 25vw" />
       </div>
       <div className="card-content">
         <h3 className="card-title">{name}</h3>
@@ -40,13 +41,12 @@ export default function ScenarioCard({ id, name, description, image, color, view
           box-shadow: 0 20px 32px -12px rgba(0, 0, 0, 0.12);
         }
         .card-image-wrapper {
+          position: relative;
           height: 160px;
           overflow: hidden;
           background: #f1f5f9;
         }
         .card-image {
-          width: 100%;
-          height: 100%;
           object-fit: cover;
           transition: transform 0.3s;
         }
