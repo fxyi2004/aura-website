@@ -1,0 +1,213 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "scenarios": "Soluciones",
+    "products": "Productos",
+    "cases": "Casos",
+    "about": "Nosotros",
+    "contact": "Cotizar"
+  },
+  "hero": {
+    "title": "AIR-GROUND-WATER\nUNMANNED SYSTEMS SOLUTIONS",
+    "button": "Ver Soluciones"
+  },
+  "scenarios_section": {
+    "title": "¿Eres agricultor, autoridad portuaria, inspector eléctrico o comandante de seguridad?",
+    "subtitle": "Parte de tu escenario y obtén recomendaciones de equipos personalizadas — sin rodeos."
+  },
+  "products_featured": {
+    "title": "Líneas de Productos Principales",
+    "subtitle": "Selección destacada para satisfacer diversas necesidades de escenarios",
+    "view_all": "Ver Todos los Productos"
+  },
+  "contact_bar": {
+    "text": "¿Necesitas consultoría personalizada?",
+    "submit": "Enviar Consulta",
+    "whatsapp": "WhatsApp"
+  },
+  "floating_btn": {
+    "label": "Consulta Rápida"
+  },
+  "quick_inquiry": {
+    "title": "Consulta Rápida",
+    "name_placeholder": "Nombre / Empresa",
+    "email_placeholder": "Correo electrónico",
+    "phone_placeholder": "Teléfono (opcional)",
+    "message_placeholder": "Describe tu escenario de aplicación y necesidades de equipo...",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "success": "¡Consulta enviada! Nos pondremos en contacto contigo pronto.",
+    "error": "Error al enviar. Inténtalo de nuevo o contáctanos por WhatsApp.",
+    "whatsapp": "📱 Chat en vivo por WhatsApp"
+  },
+  "scenarios_page": {
+    "hero_label": "SOLUCIONES",
+    "hero_title": "Soluciones por Escenario",
+    "hero_desc": "Integración centrada en el escenario de sistemas no tripulados aéreos, terrestres y acuáticos, ofreciendo combinaciones óptimas para cada industria.",
+    "recommended_products": "PRODUCTOS RECOMENDADOS",
+    "get_quote": "Solicitar Cotización",
+    "cta_title": "¿No encontraste tu escenario?",
+    "cta_desc": "Cuéntanos tus necesidades y diseñaremos una solución a medida.",
+    "contact_us": "Contáctanos"
+  },
+  "products_page": {
+    "hero_label": "PRODUCTOS",
+    "hero_title": "Centro de Productos",
+    "hero_subtitle": "UAV · UGV · USV · Sistemas IA",
+    "filter_category": "Tipo",
+    "filter_usecase": "Uso",
+    "filter_scenario": "Escenario",
+    "results_count": "{count} productos",
+    "clear_filters": "Limpiar Filtros ×",
+    "no_products": "No hay productos que coincidan con los filtros.",
+    "clear": "Limpiar Filtros"
+  },
+  "cases_page": {
+    "hero_label": "CASOS DE ÉXITO",
+    "hero_title": "Despliegues Reales, Resultados Comprobados",
+    "hero_desc": "Casos reales de despliegues globales que cubren los seis escenarios principales de AURA.",
+    "no_cases": "No hay casos disponibles.",
+    "cta_title": "Tu proyecto podría ser nuestro próximo caso de éxito.",
+    "cta_desc": "Cuéntanos tu escenario de aplicación y diseñaremos una solución personalizada.",
+    "contact_us": "Contáctanos"
+  },
+  "about_page": {
+    "hero_label": "SOBRE NOSOTROS",
+    "hero_title": "Sistemas No Tripulados que Realmente se Despliegan",
+    "hero_desc": "Integrador de sistemas no tripulados enfocado en el despliegue real. Productos de marca propia + hardware industrial curado. Tú describes el escenario — AURA se encarga del resto.",
+    "stats": [
+      { "value": "6", "label": "Escenarios de Industria" },
+      { "value": "10+", "label": "Categorías UxV" },
+      { "value": "15+", "label": "Patentes e IP" },
+      { "value": "Global", "label": "Cobertura de Servicio" }
+    ],
+    "mission_label": "NUESTRA MISIÓN",
+    "mission_title": "Por Qué Existimos",
+    "mission_desc1": "Los sistemas no tripulados pueden hacer mucho más de lo que la mayoría imagina — inspección, seguridad, entrega, agricultura, respuesta a emergencias… cada escenario tiene problemas reales esperando solución. La tecnología ya está disponible. Lo que falta es alguien que la ponga realmente a trabajar.",
+    "mission_desc2": "AURA es un integrador de sistemas no tripulados. Tenemos nuestros propios productos aéreos, terrestres y acuáticos, y seleccionamos rigurosamente el mejor equipamiento complementario del mercado. Los clientes no necesitan conocer modelos ni comparar especificaciones — solo descríbenos el problema y nos encargamos del resto.",
+    "mission_desc3": "Nuestra meta es simple: lograr que los sistemas no tripulados se desplieguen de verdad en más industrias y más lugares del mundo.",
+    "mission_link": "Ver Soluciones",
+    "why_label": "POR QUÉ AURA",
+    "why_title": "¿Por Qué Elegirnos?",
+    "advantages": [
+      {
+        "title": "Soluciones Personalizadas",
+        "desc": "Cada escenario de cliente es único. Configuramos combinaciones de productos desde cero — sin paquetes genéricos ni soluciones únicas para todos."
+      },
+      {
+        "title": "Entrega Integral",
+        "desc": "Desde la evaluación de necesidades y el diseño de soluciones hasta el suministro de equipos y el soporte de despliegue — cobertura completa, un punto de contacto."
+      },
+      {
+        "title": "Tecnología Universitaria",
+        "desc": "Codesarrollado con la Universidad Politécnica del Noroeste. Sólida profundidad técnica para afrontar desafíos complejos de integración de sistemas."
+      },
+      {
+        "title": "Precios Altamente Competitivos",
+        "desc": "Nuestra cadena de suministro completa nos permite entregar soluciones de alto rendimiento a precios muy competitivos, ayudando a los clientes a controlar los costos."
+      }
+    ],
+    "industries_label": "INDUSTRIAS",
+    "industries_title": "Industrias que Servimos",
+    "industries": [
+      { "name": "Energía y Electricidad", "desc": "Inspección de líneas de transmisión, subestaciones y gasoductos" },
+      { "name": "Agricultura y Silvicultura", "desc": "Protección precisa de cultivos, siembra, monitoreo de salud de cultivos" },
+      { "name": "Logística y Transporte", "desc": "Entrega de última milla en montañas, islas y zonas remotas" },
+      { "name": "Seguridad Pública", "desc": "Seguridad perimetral, gestión de personal, respuesta a emergencias" },
+      { "name": "Campus y Parques Inteligentes", "desc": "Entrega express y de comida, operaciones robóticas a gran escala en exteriores" },
+      { "name": "Agua y Marina", "desc": "Inspección de ríos, embalses y costas, monitoreo de calidad del agua" },
+      { "name": "Gestión de Emergencias", "desc": "Reconocimiento en desastres, búsqueda y rescate, entrega de suministros" },
+      { "name": "Defensa y Militar", "desc": "Soporte para misiones especiales, entrega de sistemas de alta fiabilidad" }
+    ],
+    "badge_line1": "AIR · GROUND · WATER",
+    "badge_line2": "Integración UxV de Dominio Completo",
+    "cta_title": "¿Quieres saber más?",
+    "cta_desc": "Contáctanos para explorar soluciones de sistemas no tripulados para tu negocio.",
+    "contact_us": "Contáctanos"
+  },
+  "contact_page": {
+    "sidebar_label": "CONTÁCTANOS",
+    "sidebar_title": "Hablemos",
+    "sidebar_desc": "Ya sea que estés planificando un proyecto, evaluando opciones o tengas un requerimiento de compra definido — te responderemos en un día hábil.",
+    "instant_chat": "Chat Instantáneo",
+    "response_time": "Tiempo de respuesta promedio < 4 horas",
+    "form_title": "Enviar Consulta",
+    "form_subtitle": "Completa los detalles a continuación y te diseñaremos una solución.",
+    "field_name": "Nombre",
+    "field_company": "Empresa",
+    "field_email": "Correo electrónico",
+    "field_country": "País",
+    "field_phone": "Teléfono",
+    "field_scenario": "Escenario de Interés",
+    "field_message": "Mensaje",
+    "field_message_placeholder": "Describe tu escenario de aplicación, necesidades de equipo, cantidad y cronograma esperado...",
+    "scenario_placeholder": "Selecciona un escenario...",
+    "scenario_island": "Logística Insular",
+    "scenario_mountain": "Carga en Montaña",
+    "scenario_agriculture": "Agricultura Inteligente",
+    "scenario_emergency": "Respuesta a Emergencias",
+    "scenario_water": "Inspección y Seguridad Acuática",
+    "scenario_campus": "Campus y Parque Inteligente",
+    "submit": "Enviar Consulta",
+    "submitting": "Enviando...",
+    "error": "Error al enviar. Inténtalo de nuevo o contáctanos directamente.",
+    "success_title": "Mensaje Enviado",
+    "success_desc": "Hemos recibido tu consulta. Un asesor técnico se pondrá en contacto contigo pronto.",
+    "submit_again": "Enviar Otra Consulta"
+  },
+  "footer": {
+    "tagline": "AIR · GROUND · WATER     SMART SYSTEMS. REAL IMPACT.",
+    "copyright": "© {year} AURA INTELLIGENT SYSTEMS"
+  },
+  "scenariosMeta": [
+    {
+      "id": "security",
+      "title": "Inspección y Seguridad",
+      "subtitle": "INSPECTION & SECURITY",
+      "description": "Coordinación aire-suelo para cobertura 24/7. UAVs y robots terrestres trabajan en sincronía con redes de cámaras IA para construir una red de seguridad en capas, reduciendo costos laborales en más del 60%.",
+      "highlights": ["Patrulla 24/7 sin personal", "Detección IA de anomalías", "Coordinación aire-suelo", "Alertas en tiempo real"]
+    },
+    {
+      "id": "campus",
+      "title": "Campus Inteligente",
+      "subtitle": "SMART CAMPUS",
+      "description": "Un sistema no tripulado que cubre todos los escenarios del campus — desde patrulla de seguridad hasta entrega de paquetes. UAVs de inspección + robots de entrega terrestres + redes de cámaras fijas construyen infraestructura de campus verdaderamente inteligente.",
+      "highlights": ["Patrulla de seguridad", "Entrega de paquetes", "Seguimiento de personal", "Alertas de eventos anómalos"]
+    },
+    {
+      "id": "agriculture",
+      "title": "Agricultura Inteligente",
+      "subtitle": "SMART AGRICULTURE",
+      "description": "Protección de cultivos de precisión a 5 veces la velocidad del trabajo manual. Planificación de vuelo totalmente automática, fumigación variable de precisión y monitoreo en tiempo real de la salud de los cultivos.",
+      "highlights": ["Planificación de vuelo automática", "Fumigación variable de precisión", "Monitoreo de salud de cultivos", "Archivo de datos de operación"]
+    },
+    {
+      "id": "logistics",
+      "title": "Logística en Montaña",
+      "subtitle": "MOUNTAIN LOGISTICS",
+      "description": "Rompiendo la barrera de la última milla en áreas remotas. UAVs de carga pesada combinados con vehículos todo terreno superan montañas, bosques y terrenos nevados para una entrega de carga eficiente y precisa.",
+      "highlights": ["Entrega de 50 kg", "Sincronización con vehículo todo terreno", "Listo para clima adverso", "Precisión de aterrizaje métrico"]
+    }
+  ],
+  "categoryOptions": [
+    { "label": "UAV", "value": "uav" },
+    { "label": "UGV", "value": "ugv" },
+    { "label": "Robot", "value": "robot" },
+    { "label": "Sensor", "value": "sensor" },
+    { "label": "USV", "value": "usv" }
+  ],
+  "usecaseLabels": {
+    "inspection": "Inspección",
+    "agriculture": "Agricultura",
+    "security": "Seguridad",
+    "cargo": "Carga",
+    "logistics": "Logística",
+    "transport": "Transporte"
+  },
+  "scenarioLabels": {
+    "campus": "Campus Inteligente",
+    "agriculture": "Agricultura Inteligente",
+    "security": "Inspección y Seguridad",
+    "logistics": "Logística en Montaña"
+  }
+}

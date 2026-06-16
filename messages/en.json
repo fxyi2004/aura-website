@@ -1,0 +1,213 @@
+{
+  "nav": {
+    "home": "Home",
+    "scenarios": "Solutions",
+    "products": "Products",
+    "cases": "Case Studies",
+    "about": "About Us",
+    "contact": "Get a Quote"
+  },
+  "hero": {
+    "title": "AIR-GROUND-WATER\nUNMANNED SYSTEMS SOLUTIONS",
+    "button": "View Solutions"
+  },
+  "scenarios_section": {
+    "title": "Are you a farm owner? Harbor authority? Power inspector? Or a security commander?",
+    "subtitle": "Start from your scenario, get tailored equipment recommendations — no guesswork."
+  },
+  "products_featured": {
+    "title": "Core Product Lines",
+    "subtitle": "Curated picks to meet diverse scenario demands",
+    "view_all": "View All Products"
+  },
+  "contact_bar": {
+    "text": "Need one-on-one consultation?",
+    "submit": "Submit Inquiry",
+    "whatsapp": "WhatsApp Us"
+  },
+  "floating_btn": {
+    "label": "Quick Inquiry"
+  },
+  "quick_inquiry": {
+    "title": "Quick Inquiry",
+    "name_placeholder": "Name / Company",
+    "email_placeholder": "Email",
+    "phone_placeholder": "Phone (optional)",
+    "message_placeholder": "Describe your application scenario and equipment needs...",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "success": "Inquiry submitted! We'll get back to you shortly.",
+    "error": "Submission failed. Please try again or contact us via WhatsApp.",
+    "whatsapp": "📱 WhatsApp Live Chat"
+  },
+  "scenarios_page": {
+    "hero_label": "SOLUTIONS",
+    "hero_title": "Scenario Solutions",
+    "hero_desc": "Scenario-centric integration of air, ground, and water unmanned systems, delivering optimal combinations for every industry.",
+    "recommended_products": "RECOMMENDED PRODUCTS",
+    "get_quote": "Get a Quote",
+    "cta_title": "Can't find your scenario?",
+    "cta_desc": "Tell us your requirements and we'll build a custom solution.",
+    "contact_us": "Contact Us"
+  },
+  "products_page": {
+    "hero_label": "PRODUCTS",
+    "hero_title": "Product Center",
+    "hero_subtitle": "UAV · UGV · USV · AI Systems",
+    "filter_category": "Type",
+    "filter_usecase": "Use",
+    "filter_scenario": "Scene",
+    "results_count": "{count} products found",
+    "clear_filters": "Clear Filters ×",
+    "no_products": "No products match the selected filters.",
+    "clear": "Clear Filters"
+  },
+  "cases_page": {
+    "hero_label": "CASE STUDIES",
+    "hero_title": "Real Deployments, Proven Results",
+    "hero_desc": "Real-world cases from global deployments, covering AURA's six core scenarios.",
+    "no_cases": "No cases available.",
+    "cta_title": "Your project could be our next success story.",
+    "cta_desc": "Tell us your application scenario and we'll design a tailored solution.",
+    "contact_us": "Contact Us"
+  },
+  "about_page": {
+    "hero_label": "ABOUT US",
+    "hero_title": "Unmanned Systems That Actually Deploy",
+    "hero_desc": "An unmanned systems integrator focused on real-world deployment. Own-brand products + curated industry hardware. You describe the scenario — AURA handles the rest.",
+    "stats": [
+      { "value": "6", "label": "Industry Scenarios" },
+      { "value": "10+", "label": "UxV Categories" },
+      { "value": "15+", "label": "Patents & IP" },
+      { "value": "Global", "label": "Service Coverage" }
+    ],
+    "mission_label": "OUR MISSION",
+    "mission_title": "Why We Exist",
+    "mission_desc1": "Unmanned systems can do far more than most people realize — inspection, security, delivery, agriculture, emergency response… every scenario has real pain points waiting to be solved. The technology is already there. What's missing is someone to actually put it to work.",
+    "mission_desc2": "AURA is an unmanned systems integrator. We have our own air, ground, and water products, and we rigorously select the best-value supporting equipment on the market. Customers don't need to know drone model numbers or compare specs — just tell us the problem, and we handle everything else.",
+    "mission_desc3": "Our goal is simple: get unmanned systems truly deployed in more industries and more places around the world.",
+    "mission_link": "View Solutions",
+    "why_label": "WHY AURA",
+    "why_title": "Why Choose Us",
+    "advantages": [
+      {
+        "title": "Customized Solutions",
+        "desc": "Every client's scenario is unique. We configure product combinations from the ground up — no generic packages, no one-size-fits-all."
+      },
+      {
+        "title": "End-to-End Delivery",
+        "desc": "From needs assessment and solution design to equipment supply and deployment support — full coverage, one point of contact."
+      },
+      {
+        "title": "University-Backed Technology",
+        "desc": "Co-developed with Northwestern Polytechnical University. Solid technical depth to tackle complex system integration challenges."
+      },
+      {
+        "title": "Highly Competitive Pricing",
+        "desc": "Our complete supply chain enables us to deliver high-performance solutions at highly competitive prices, helping clients control project costs."
+      }
+    ],
+    "industries_label": "INDUSTRIES",
+    "industries_title": "Industries We Serve",
+    "industries": [
+      { "name": "Energy & Power", "desc": "Transmission lines, substations, oil & gas pipeline inspection" },
+      { "name": "Agriculture & Forestry", "desc": "Precision crop protection, seeding, crop health monitoring" },
+      { "name": "Logistics & Transport", "desc": "Last-mile delivery in mountains, islands, and remote areas" },
+      { "name": "Public Safety", "desc": "Perimeter security, personnel management, emergency response" },
+      { "name": "Smart Campus & Parks", "desc": "Express and food delivery, large-scale outdoor robot operations" },
+      { "name": "Water & Marine", "desc": "River, reservoir, and coastal inspection and water quality monitoring" },
+      { "name": "Emergency Management", "desc": "Disaster reconnaissance, search & rescue, cargo delivery" },
+      { "name": "Defense & Military", "desc": "Special mission support, high-reliability system delivery" }
+    ],
+    "badge_line1": "AIR · GROUND · WATER",
+    "badge_line2": "Full-Domain UxV Integration",
+    "cta_title": "Want to learn more?",
+    "cta_desc": "Contact us to discuss unmanned system solutions for your business.",
+    "contact_us": "Contact Us"
+  },
+  "contact_page": {
+    "sidebar_label": "CONTACT US",
+    "sidebar_title": "Let's Talk",
+    "sidebar_desc": "Whether you're planning a project, evaluating options, or have a firm procurement requirement — we'll respond within one business day.",
+    "instant_chat": "Instant Chat",
+    "response_time": "Avg. response time < 4 hours",
+    "form_title": "Submit Your Inquiry",
+    "form_subtitle": "Fill in the details below and we'll tailor a solution for you.",
+    "field_name": "Name",
+    "field_company": "Company",
+    "field_email": "Email",
+    "field_country": "Country",
+    "field_phone": "Phone",
+    "field_scenario": "Scenario of Interest",
+    "field_message": "Message",
+    "field_message_placeholder": "Describe your application scenario, equipment needs, quantity, and expected delivery timeline...",
+    "scenario_placeholder": "Select a scenario...",
+    "scenario_island": "Island Logistics",
+    "scenario_mountain": "Mountain Cargo",
+    "scenario_agriculture": "Smart Agriculture",
+    "scenario_emergency": "Emergency Response",
+    "scenario_water": "Water Survey & Security",
+    "scenario_campus": "Smart Campus & Park",
+    "submit": "Send Inquiry",
+    "submitting": "Submitting...",
+    "error": "Submission failed. Please try again or contact us directly.",
+    "success_title": "Message Sent",
+    "success_desc": "We've received your inquiry. A technical advisor will contact you shortly.",
+    "submit_again": "Submit Again"
+  },
+  "footer": {
+    "tagline": "AIR · GROUND · WATER     SMART SYSTEMS. REAL IMPACT.",
+    "copyright": "© {year} AURA INTELLIGENT SYSTEMS"
+  },
+  "scenariosMeta": [
+    {
+      "id": "security",
+      "title": "Inspection & Security",
+      "subtitle": "INSPECTION & SECURITY",
+      "description": "Air-ground coordination for 24/7 coverage. UAVs and ground robots work in sync with AI camera networks to build a layered security grid, cutting labor costs by over 60%.",
+      "highlights": ["24/7 Unmanned Patrol", "AI Anomaly Detection", "Air-Ground Coordination", "Real-Time Alert Push"]
+    },
+    {
+      "id": "campus",
+      "title": "Smart Campus",
+      "subtitle": "SMART CAMPUS",
+      "description": "One unmanned system covering all campus scenarios — from security patrol to parcel delivery. Inspection UAVs + ground delivery robots + fixed camera networks build true smart campus infrastructure.",
+      "highlights": ["Campus Security Patrol", "Last-Mile Parcel Delivery", "Personnel Tracking", "Anomaly Event Alerts"]
+    },
+    {
+      "id": "agriculture",
+      "title": "Smart Agriculture",
+      "subtitle": "SMART AGRICULTURE",
+      "description": "Precision crop protection at 5× the speed of manual labor. Fully automated flight planning, precision variable-rate spraying, and real-time crop health monitoring deliver digital solutions for modern farming.",
+      "highlights": ["Auto Flight Planning", "Precision Variable Spraying", "Crop Health Monitoring", "Operation Data Archive"]
+    },
+    {
+      "id": "logistics",
+      "title": "Mountain Logistics",
+      "subtitle": "MOUNTAIN LOGISTICS",
+      "description": "Breaking the last-mile barrier in remote areas. Heavy-lift UAVs paired with all-terrain vehicles overcome mountains, forests, and snow-covered terrain for efficient, precise cargo delivery.",
+      "highlights": ["50 kg Cargo Delivery", "All-Terrain Vehicle Sync", "Adverse Weather Ready", "Meter-Level Drop Accuracy"]
+    }
+  ],
+  "categoryOptions": [
+    { "label": "UAV", "value": "uav" },
+    { "label": "UGV", "value": "ugv" },
+    { "label": "Robot", "value": "robot" },
+    { "label": "Sensor", "value": "sensor" },
+    { "label": "USV", "value": "usv" }
+  ],
+  "usecaseLabels": {
+    "inspection": "Inspection",
+    "agriculture": "Agriculture",
+    "security": "Security",
+    "cargo": "Cargo",
+    "logistics": "Logistics",
+    "transport": "Transport"
+  },
+  "scenarioLabels": {
+    "campus": "Smart Campus",
+    "agriculture": "Smart Agriculture",
+    "security": "Inspection & Security",
+    "logistics": "Mountain Logistics"
+  }
+}

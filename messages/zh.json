@@ -1,0 +1,213 @@
+{
+  "nav": {
+    "home": "首页",
+    "scenarios": "场景方案",
+    "products": "产品中心",
+    "cases": "案例展示",
+    "about": "关于我们",
+    "contact": "获取报价"
+  },
+  "hero": {
+    "title": "AIR-GROUND-WATER\nUNMANNED SYSTEMS SOLUTIONS",
+    "button": "查看解决方案"
+  },
+  "scenarios_section": {
+    "title": "您好，您是农场主？海洋局？电力巡检员？还是安防指挥官？",
+    "subtitle": "从您的场景出发，获取专属装备推荐，选型不绕路。"
+  },
+  "products_featured": {
+    "title": "核心产品系列",
+    "subtitle": "精选推荐，满足多样化场景需求",
+    "view_all": "查看全部产品"
+  },
+  "contact_bar": {
+    "text": "需要一对一咨询？",
+    "submit": "提交需求",
+    "whatsapp": "WhatsApp 沟通"
+  },
+  "floating_btn": {
+    "label": "快速询盘"
+  },
+  "quick_inquiry": {
+    "title": "快速提交需求",
+    "name_placeholder": "姓名 / 公司",
+    "email_placeholder": "邮箱",
+    "phone_placeholder": "电话（选填）",
+    "message_placeholder": "描述您的应用场景、设备需求...",
+    "submit": "提交需求",
+    "submitting": "提交中...",
+    "success": "需求已提交！我们会尽快联系您",
+    "error": "提交失败，请稍后重试或通过 WhatsApp 联系我们",
+    "whatsapp": "📱 WhatsApp 即时沟通"
+  },
+  "scenarios_page": {
+    "hero_label": "SOLUTIONS",
+    "hero_title": "场景解决方案",
+    "hero_desc": "以场景为中心，整合空、地、水无人系统，为每个行业定制最优组合",
+    "recommended_products": "推荐产品",
+    "get_quote": "获取方案报价",
+    "cta_title": "没有找到匹配的场景？",
+    "cta_desc": "告诉我们你的需求，我们为你定制解决方案",
+    "contact_us": "联系我们"
+  },
+  "products_page": {
+    "hero_label": "PRODUCTS",
+    "hero_title": "产品中心",
+    "hero_subtitle": "无人机 · 无人车 · 无人船 · AI系统",
+    "filter_category": "品类",
+    "filter_usecase": "用途",
+    "filter_scenario": "场景",
+    "results_count": "共 {count} 款产品",
+    "clear_filters": "清除筛选 ×",
+    "no_products": "暂无符合条件的产品",
+    "clear": "清除筛选"
+  },
+  "cases_page": {
+    "hero_label": "CASE STUDIES",
+    "hero_title": "真实场景，经过验证的成果",
+    "hero_desc": "来自全球各地的真实部署案例，覆盖 AURA 六大核心场景",
+    "no_cases": "暂无案例",
+    "cta_title": "你的项目，是下一个成功案例",
+    "cta_desc": "告诉我们你的应用场景，我们为你量身定制解决方案",
+    "contact_us": "联系我们"
+  },
+  "about_page": {
+    "hero_label": "ABOUT US",
+    "hero_title": "让无人系统真正落地",
+    "hero_desc": "无人系统集成商，专注场景落地。自有品牌产品 + 精选行业设备，客户只需告诉我们场景，其余交给 AURA。",
+    "stats": [
+      { "value": "6", "label": "大行业应用场景" },
+      { "value": "10+", "label": "无人系统品类" },
+      { "value": "15+", "label": "项知识产权" },
+      { "value": "全球", "label": "服务范围" }
+    ],
+    "mission_label": "OUR MISSION",
+    "mission_title": "我们存在的理由",
+    "mission_desc1": "无人系统能做的事远比大多数人意识到的多——巡检、安防、配送、农业、应急……每一个场景都有真实的痛点等待被解决。技术已经在那里，缺的是把它真正用起来的人。",
+    "mission_desc2": "AURA 是无人系统集成商。我们有自有品牌的空、地、水无人产品，也严格筛选市场上性价比最优的配套设备。客户不需要懂无人机型号、不需要比较参数——只需要告诉我们要解决什么问题，我们来负责其余所有事情。",
+    "mission_desc3": "我们的目标很简单：让无人系统在全球更多行业、更多地方真正落地。",
+    "mission_link": "查看解决方案",
+    "why_label": "WHY AURA",
+    "why_title": "为什么选择我们",
+    "advantages": [
+      {
+        "title": "定制化方案",
+        "desc": "每个客户的场景都不一样。我们从需求出发，量身配置产品组合，不推通用套餐，不做一刀切。"
+      },
+      {
+        "title": "一站式交付",
+        "desc": "从需求沟通、方案设计、设备供货到部署支持，全程跟进，客户只需要一个对接人。"
+      },
+      {
+        "title": "高校技术背景",
+        "desc": "与西北工业大学开展校企合作，技术储备扎实，能应对复杂场景下的系统集成挑战。"
+      },
+      {
+        "title": "极具竞争力的价格",
+        "desc": "完整的供应链支撑让我们能以极具竞争力的价格交付高性能方案，帮助客户控制项目成本。"
+      }
+    ],
+    "industries_label": "INDUSTRIES",
+    "industries_title": "服务行业",
+    "industries": [
+      { "name": "能源电力", "desc": "输电线路、变电站、油气管道巡检" },
+      { "name": "农林牧渔", "desc": "精准植保、播种、作物健康监测" },
+      { "name": "物流运输", "desc": "山区、海岛、偏远地区末端配送" },
+      { "name": "公共安全", "desc": "周界安防、人员管控、应急处置" },
+      { "name": "智慧园区", "desc": "快递与外卖末端配送，室外无人车规模化运营" },
+      { "name": "水利海洋", "desc": "河道、水库、近海巡检与水质监测" },
+      { "name": "应急管理", "desc": "灾害现场侦察、搜救与物资投送" },
+      { "name": "国防军工", "desc": "特种任务支持，高可靠性系统交付" }
+    ],
+    "badge_line1": "AIR · GROUND · WATER",
+    "badge_line2": "无人系统全域集成",
+    "cta_title": "想了解更多？",
+    "cta_desc": "联系我们，探讨适合你业务的无人系统方案",
+    "contact_us": "联系我们"
+  },
+  "contact_page": {
+    "sidebar_label": "CONTACT US",
+    "sidebar_title": "与我们对话",
+    "sidebar_desc": "无论您正在规划项目、评估方案，还是已有明确采购需求，我们将在一个工作日内回复您。",
+    "instant_chat": "即时沟通",
+    "response_time": "平均响应时间 < 4小时",
+    "form_title": "提交需求",
+    "form_subtitle": "填写以下信息，我们将为您定制解决方案",
+    "field_name": "Name / 姓名",
+    "field_company": "Company / 公司",
+    "field_email": "Email",
+    "field_country": "Country / 国家",
+    "field_phone": "Phone / 电话",
+    "field_scenario": "Scenario / 感兴趣的场景",
+    "field_message": "Message / 需求描述",
+    "field_message_placeholder": "Describe your application scenario, equipment needs, quantity, and expected delivery timeline...",
+    "scenario_placeholder": "Select a scenario...",
+    "scenario_island": "Island Logistics / 海岛物流",
+    "scenario_mountain": "Mountain Cargo / 山区运输",
+    "scenario_agriculture": "Smart Agriculture / 智慧农业",
+    "scenario_emergency": "Emergency Response / 应急救援",
+    "scenario_water": "Water Survey & Security / 水域巡检",
+    "scenario_campus": "Smart Campus & Park / 智慧园区",
+    "submit": "发送需求",
+    "submitting": "提交中...",
+    "error": "提交失败，请稍后重试或直接联系我们。",
+    "success_title": "消息已发送",
+    "success_desc": "我们已收到您的需求，技术顾问将尽快与您联系。",
+    "submit_again": "再次提交"
+  },
+  "footer": {
+    "tagline": "AIR · GROUND · WATER     SMART SYSTEMS. REAL IMPACT.",
+    "copyright": "© {year} AURA INTELLIGENT SYSTEMS"
+  },
+  "scenariosMeta": [
+    {
+      "id": "security",
+      "title": "巡检安防",
+      "subtitle": "INSPECTION & SECURITY",
+      "description": "空地协同、全天候覆盖。无人机高空巡检与地面机器人联动，配合AI摄像系统，构建立体化安防网络，将人力成本降低60%以上。",
+      "highlights": ["24小时无人值守", "AI异常行为识别", "空地联动响应", "实时预警推送"]
+    },
+    {
+      "id": "campus",
+      "title": "智慧校园",
+      "subtitle": "SMART CAMPUS",
+      "description": "从校园安保到快递配送，一套无人系统覆盖全场景。巡检无人机+地面配送机器人+固定摄像网络，打造真正的智慧校园基础设施。",
+      "highlights": ["校园安防巡逻", "快递末端配送", "人员轨迹分析", "异常事件告警"]
+    },
+    {
+      "id": "agriculture",
+      "title": "智慧农业",
+      "subtitle": "SMART AGRICULTURE",
+      "description": "精准植保，效率是人工的5倍。全自动航线规划，精准喷洒，实时监测作物长势，为农业生产提供数字化解决方案。",
+      "highlights": ["全自动航线规划", "精准变量喷洒", "作物健康监测", "作业数据存档"]
+    },
+    {
+      "id": "logistics",
+      "title": "山地物流",
+      "subtitle": "MOUNTAIN LOGISTICS",
+      "description": "打通偏远地区最后一公里。大载重无人机配合全地形运输车，克服山地、林区、雪地等复杂地形，实现物资高效精准投送。",
+      "highlights": ["50kg级载重投送", "全地形车协同", "复杂气象适应", "米级精准投放"]
+    }
+  ],
+  "categoryOptions": [
+    { "label": "无人机", "value": "uav" },
+    { "label": "无人车", "value": "ugv" },
+    { "label": "机器人", "value": "robot" },
+    { "label": "传感设备", "value": "sensor" },
+    { "label": "无人船", "value": "usv" }
+  ],
+  "usecaseLabels": {
+    "inspection": "巡检类",
+    "agriculture": "农业类",
+    "security": "安防类",
+    "cargo": "运载类",
+    "logistics": "物流类",
+    "transport": "运输类"
+  },
+  "scenarioLabels": {
+    "campus": "智慧校园",
+    "agriculture": "智慧农业",
+    "security": "巡检安防",
+    "logistics": "山地物流"
+  }
+}
