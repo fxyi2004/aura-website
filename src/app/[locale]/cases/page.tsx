@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getCases } from '@/lib/cases';
 import CasesClient from '../../cases/CasesClient';
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 const META: Record<string, { title: string; description: string }> = {
   en: { title: 'Case Studies', description: 'Real-world unmanned systems deployments across island logistics, mountain cargo, agriculture, emergency response, water inspection, and smart campuses.' },

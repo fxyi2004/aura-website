@@ -8,6 +8,8 @@ const META: Record<string, { title: string; description: string }> = {
   es: { title: 'Soluciones', description: 'Soluciones de sistemas no tripulados centradas en el escenario: inspección y seguridad, campus inteligente, agricultura y logística en montaña.' },
 };
 
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = META[locale] ?? META.en;

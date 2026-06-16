@@ -8,6 +8,8 @@ const META: Record<string, { title: string; description: string }> = {
   es: { title: 'Productos', description: 'Explora la gama completa de UAV, UGV, USV y sistemas IA de AURA — drones de inspección, fumigadores agrícolas, drones de carga, robots de seguridad y más.' },
 };
 
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = META[locale] ?? META.en;
