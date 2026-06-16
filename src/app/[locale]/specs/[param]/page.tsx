@@ -1,2 +1,2 @@
-import SpecPage from '../../../specs/[param]/page';
-export default SpecPage;
+import SpecDetailClient from '../../../specs/[param]/SpecDetailClient';
+export default SpecDetailClient;

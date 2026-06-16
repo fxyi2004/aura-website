@@ -11,7 +11,7 @@ interface Props {
   params: { id: string };
 }
 
-export default function ProductDetailPage({ params }: Props) {
+export default function ProductDetailClient({ params }: Props) {
   const [product, setProduct] = useState<Product | null>(null);
   const [related, setRelated] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);

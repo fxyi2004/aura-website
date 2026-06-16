@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getProductById } from '@/lib/products';
 import { getTranslations } from 'next-intl/server';
-import ProductDetailPage from '../../../products/[id]/page';
+import ProductDetailPage from '../../../products/[id]/ProductDetailClient';
 
 export async function generateMetadata({
   params,
