@@ -3,7 +3,7 @@ import { scenariosMeta } from '@/app/data/scenariosMeta';
 import { getAllProducts } from '@/lib/products';
 import ScenarioDetailClient from '../../../scenarios/[slug]/ScenarioDetailClient';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 3600;
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
