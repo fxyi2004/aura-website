@@ -17,7 +17,7 @@ export default function ProductsFeatured() {
           <p className="section-subtitle">{t('subtitle')}</p>
         </div>
         <div className="products-grid">
-          {allProducts.slice(0, 6).map((product) => (
+          {allProducts.slice(0, 8).map((product) => (
             <ProductCard
               key={product.id}
               id={product.id}

@@ -75,7 +75,7 @@ export default function Hero() {
         }
         .hero-tags {
           display: flex;
-          gap: 20px;
+          gap: 6px;
           margin-bottom: 30px;
           font-size: 15px;
           font-weight: 500;

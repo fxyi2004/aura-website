@@ -101,16 +101,6 @@ export default function ProductsClient({ products }: { products: Product[] }) {
       <div className="container">
         <div className="products-wrapper">
         <div className="filters">
-          <div className="filter-row">
-            <span className="filter-label">{t('filter_category')}</span>
-            <div className="filter-group">
-              {categoryOptions.map(f => (
-                <button key={f.value} className={`filter-btn ${activeCategory === f.value ? 'active' : ''}`} onClick={() => handleCategoryClick(f.value)}>
-                  {f.label}
-                </button>
-              ))}
-            </div>
-          </div>
           {activeCategory && availableUsecases.length > 0 && (
             <div className="filter-row sub">
               <span className="filter-label">{t('filter_usecase')}</span>
