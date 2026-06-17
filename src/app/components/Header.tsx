@@ -44,12 +44,8 @@ export default function Header() {
             <button className={`locale-btn ${locale === 'es' ? 'active' : ''}`} onClick={() => switchLocale('es')}>ES</button>
           </div>
           <div className="header-inner">
-            <Link href="/" className="logo" onClick={closeMenu} style={{display:'flex',alignItems:'center',gap:'10px',textDecoration:'none'}}>
-              <Image src="/images/logo/aura-icon.webp" alt="AURA icon" width={52} height={52} priority style={{objectFit:'contain'}} />
-              <div style={{display:'flex',flexDirection:'column',gap:'2px'}}>
-                <span className="logo-name">AURA</span>
-                <span className="logo-slogan">SMART SYSTEMS, REAL IMPACT.</span>
-              </div>
+            <Link href="/" className="logo" onClick={closeMenu}>
+              <Image src="/images/logo/aura-logo-slogan.webp" alt="AURA" width={981} height={305} priority style={{height:'68px',width:'auto'}} />
             </Link>
 
             <nav className="nav">
@@ -138,11 +134,7 @@ export default function Header() {
           align-items: center;
           height: 75px;
         }
-        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .logo-icon { width: 52px; height: 52px; object-fit: contain; }
-        .logo-text { display: flex; flex-direction: column; gap: 1px; }
-        .logo-name { font-size: 28px; font-weight: 900; color: #0f2557; letter-spacing: 3px; line-height: 1; font-family: 'Arial Black', sans-serif; }
-        .logo-slogan { font-size: 9px; font-weight: 600; color: #0f2557; letter-spacing: 2px; opacity: 0.7; }
+        .logo-image { height: 72px; width: auto; }
         .nav {
           display: flex;
           gap: 40px;
@@ -260,9 +252,7 @@ export default function Header() {
           .mobile-overlay { display: block; }
           .mobile-drawer { display: flex; }
           .locale-row { display: none; }
-          .logo-icon { width: 40px; height: 40px; }
-          .logo-name { font-size: 22px; }
-          .logo-slogan { font-size: 7.5px; }
+          .logo-image { height: 52px; }
           .header-inner { height: 65px; }
         }
       `}</style>
