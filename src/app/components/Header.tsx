@@ -45,7 +45,7 @@ export default function Header() {
           </div>
           <div className="header-inner">
             <Link href="/" className="logo" onClick={closeMenu}>
-              <Image src="/images/logo/aura-logo-slogan.webp" alt="AURA" width={981} height={305} priority style={{height:'68px',width:'auto'}} />
+              <Image src="/images/logo/aura-logo-slogan.webp" alt="AURA" width={1962} height={610} priority style={{height:'68px',width:'auto'}} />
             </Link>
 
             <nav className="nav">
