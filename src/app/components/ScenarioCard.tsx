@@ -42,7 +42,7 @@ export default function ScenarioCard({ id, name, description, image, color, view
         }
         .card-image-wrapper {
           position: relative;
-          height: 160px;
+          height: 220px;
           overflow: hidden;
           background: #f1f5f9;
         }
