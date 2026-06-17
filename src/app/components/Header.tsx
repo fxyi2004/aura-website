@@ -45,7 +45,7 @@ export default function Header() {
           </div>
           <div className="header-inner">
             <Link href="/" className="logo" onClick={closeMenu}>
-              <Image src="/images/logo/aura-logo-slogan.webp" alt="AURA" width={1962} height={610} priority style={{height:'68px',width:'auto'}} />
+              <Image src="/images/logo/aura-logo-slogan.webp" alt="AURA" width={1962} height={610} priority style={{height:'90px',width:'auto'}} />
             </Link>
 
             <nav className="nav">
@@ -92,7 +92,7 @@ export default function Header() {
         .header {
           position: sticky;
           top: 0;
-          padding: 15.5px 0;
+          padding: 4px 0;
           z-index: 200;
           background: white;
           transition: all 0.3s ease;
@@ -112,7 +112,7 @@ export default function Header() {
           justify-content: flex-end;
           align-items: center;
           gap: 4px;
-          padding: 6px 0 0;
+          padding: 2px 0 0;
         }
         .locale-btn {
           background: none;
@@ -132,7 +132,7 @@ export default function Header() {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          height: 75px;
+          height: 96px;
         }
         .logo-image { height: 72px; width: auto; }
         .nav {
