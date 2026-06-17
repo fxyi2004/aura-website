@@ -48,7 +48,7 @@ export default function ProductCard({ id, name, description, image }: ProductCar
         }
         .product-image-wrapper {
           position: relative;
-          aspect-ratio: 4 / 3;
+          aspect-ratio: 16 / 9;
           overflow: hidden;
           background: #0f172a;
         }
